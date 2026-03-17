@@ -20,7 +20,7 @@ public class ExtentReportManager {
 
             extent = new ExtentReports();
             extent.attachReporter(sparkReporter);
-            extent.setSystemInfo("Tester", "Vaishnavi");
+            extent.setSystemInfo("Tester", "Mohini");
             extent.setSystemInfo("Environment", "QA");
             extent.setSystemInfo("Browser", "Chrome");
             extent.setSystemInfo("Site", "https://www.saucedemo.com");
