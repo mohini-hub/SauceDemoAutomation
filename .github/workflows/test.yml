@@ -1,0 +1,41 @@
+name: SauceDemo Automation Tests
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    - cron: '30 17 * * *'  # Rozcha raat 11 IST
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Code checkout
+        uses: actions/checkout@v3
+
+      - name: Java 11 setup
+        uses: actions/setup-java@v3
+        with:
+          java-version: '11'
+          distribution: 'temurin'
+
+      - name: Chrome setup
+        uses: browser-actions/setup-chrome@latest
+
+      - name: Maven dependencies
+        run: mvn dependency:resolve
+
+      - name: Tests run (headless)
+        run: mvn test -Dheadless=true
+        continue-on-error: true
+
+      - name: Reports upload
+        uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: test-reports
+          path: reports/
+          retention-days: 30

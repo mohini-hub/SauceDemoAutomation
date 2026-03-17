@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="SauceDemo Automation Suite" verbose="1">
+
+    <parameter name="browser" value="chrome"/>
+    <parameter name="environment" value="QA"/>
+    <parameter name="url" value="https://www.saucedemo.com"/>
+
+    <!-- Login Tests - 9 test cases -->
+    <test name="Login Test Cases">
+        <classes>
+            <class name="tests.LoginTest"/>
+        </classes>
+    </test>
+
+    <!-- Product + Cart Tests - 8 test cases -->
+    <test name="Product and Cart Test Cases">
+        <classes>
+            <class name="tests.ProductTest"/>
+        </classes>
+    </test>
+
+</suite>
