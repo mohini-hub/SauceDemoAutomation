@@ -156,6 +156,6 @@ Screenshots: reports/screenshots/
 ## 👩‍💻 Author
 
 **Mohini** — QA Engineer  
-2+ years experience | Manual + Automation Testing  
+3+ years experience | Manual + Automation Testing  
 Domains: EdTech | ERP | E-Commerce | Healthcare  
 🔗 [LinkedIn Profile](https://linkedin.com/in/yourprofile) | [GitHub](https://github.com/yourusername)
